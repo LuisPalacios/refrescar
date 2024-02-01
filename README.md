@@ -1,2 +1,4 @@
-# refrescar
-Un refresco por la mañana con C++ en el 2024
+# Refrescar
+
+Un pequeño repositorio para refrescar mi C/C++ en el 2024, con las nuevas herramientas. 
+
