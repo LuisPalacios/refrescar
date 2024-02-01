@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # Nombre de proyecto y habilito C++
-project(cuadrado LANGUAGES CXX)
+project(runTests LANGUAGES CXX)
 
 # Requiero la versión C++ 11
 set(CMAKE_CXX_STANDARD 11)
@@ -23,8 +23,9 @@ add_executable(runTests cuadrado.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 
 # Defino cuales son sus fuentes
-target_sources(
-    cuadrado
-    PRIVATE
-        cuadrado.cpp   
-    )
+#target_sources(
+#    runTests
+#    PRIVATE
+#        cuadrado.cpp
+#        queprobar.cpp   
+#    )

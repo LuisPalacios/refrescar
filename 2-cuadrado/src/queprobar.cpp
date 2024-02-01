@@ -2,11 +2,16 @@
 #include <math.h>
 
 double raizCuadrada(const double a) {
-    double b = sqrt(a);
-    if(b != b) { // nan check
+    if (a < 0.0 ) {
         return -1.0;
-    }else{
+    } else {
         return sqrt(a);
     }
+    // double b = sqrt(a);
+    // if(b != b) { // nan check
+    //     return -1.0;
+    // }else{
+    //     return sqrt(a);
+    // }
 }
 
