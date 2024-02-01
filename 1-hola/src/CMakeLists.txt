@@ -1,7 +1,7 @@
 # Fichero CMake de LuisPa
 
 # Parar si la versión es menor de 3.0
-cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # Nombre de proyecto y habilito C++
 project(hola LANGUAGES CXX)
