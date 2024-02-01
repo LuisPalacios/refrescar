@@ -7,11 +7,5 @@ double raizCuadrada(const double a) {
     } else {
         return sqrt(a);
     }
-    // double b = sqrt(a);
-    // if(b != b) { // nan check
-    //     return -1.0;
-    // }else{
-    //     return sqrt(a);
-    // }
 }
 
