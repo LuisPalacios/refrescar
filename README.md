@@ -16,7 +16,7 @@ make
 
 ### 1-hola tests
 
-El típico hola mundo preparado para cmake. 
+Un ejemplo de uso de Unit Tests con Google Tests
 
 ```shell
 cd 2-cuadrado
