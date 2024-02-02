@@ -14,7 +14,7 @@ make
 ./hola
 ```
 
-### 1-hola tests
+### 2-cuadrado tests
 
 Un ejemplo de uso de Unit Tests con Google Tests
 
