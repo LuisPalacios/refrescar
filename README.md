@@ -2,29 +2,21 @@
 
 Un pequeño repositorio para refrescar mi C/C++ en el 2024, con cmake, boost, google tests
 
-### 1-hola
+### Ejemplos
 
-El típico hola mundo preparado para cmake. 
-
-```shell
-cd 1-hola
-cd build
-cmake ../src
-make
-./hola
-```
-
-### 2-cuadrado tests
-
-Un ejemplo de uso de Unit Tests con Google Tests
+Entrar en cada uno de los directorios, preparar con cmake, compilar y ejecutar
 
 ```shell
-cd 2-cuadrado
+cd n-nombre
+mkdir build 2>/dev/null
 cd build
-cmake ../src
-make
-./cuadrado
+cmake ../src && make
+./nombre
 ```
 
+Actualizar desde la raiz del proyecto
 
+```shell
+git add . && git commit -am "descripción"
+```
 
