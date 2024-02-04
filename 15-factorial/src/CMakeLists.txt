@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # Nombre de proyecto y habilito C++
-project(suma LANGUAGES CXX)
+project(programa LANGUAGES CXX)
 
 # Requiero la versión C++ 11
 set(CMAKE_CXX_STANDARD 11)
@@ -12,11 +12,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Defino el ejecutable de salida
-add_executable(conversor "")
+add_executable(programa "")
 
 # Defino cuales son sus fuentes
 target_sources(
-    conversor
+    programa
     PRIVATE
-        conversor.cpp   
+        programa.cpp   
     )
