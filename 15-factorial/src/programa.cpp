@@ -17,10 +17,10 @@ using namespace std;
 
 long factorial(long num)
 {
-    long ret = 1;
-    if (num > 0)
-        ret = (num * factorial(num - 1));
-    return ret;
+    if ( !num ) return 1;
+    else {
+        return (num * factorial(num - 1));
+    }
 }
 
 // Entrada
