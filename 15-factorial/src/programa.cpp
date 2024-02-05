@@ -34,11 +34,12 @@ int main()
     cout << setprecision(14);
     cout << "--" << endl;
 
-    cout << "Número: ";
+    cout << "Número sobre el cual calcularé su factorial: ";
     cin >> num;
     cout << endl;
 
-    cout << "FACTORIAL de " << num << ": " << factorial(num) << endl;
+    cout << "Factorial de " << num << "! = " << factorial(num) << endl;
+    cout << endl;
 
 
     return 0;
