@@ -15,9 +15,10 @@
 
 using namespace std;
 
+// Función recursiva
 long factorial(long num)
 {
-    if ( !num ) return 1;
+    if ( !num ) return 1; // Salida de la recursividad.
     else {
         return (num * factorial(num - 1));
     }
