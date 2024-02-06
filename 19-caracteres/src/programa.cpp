@@ -1,10 +1,8 @@
 // Programa para pruebas en C++
 //
-// Escribe un ejemplo en C++ donde se pidan texto dos veces al usuario 
-// desde la entrada estándar y entre ambas peticiones se limpie el buffer 
-// de entrada estándar. 
-//
-// Pedir la primera entrada con fgets() y la segunda con getline() 
+
+// Pedir dos veces al usuario un texto y mostrarlo. Usando la entrada
+// estándar. Entre ambas peticiones limpiar el buffer de entrada estándar. 
 //
 
 
@@ -14,29 +12,55 @@
 #include <string>
 
 int main() {
-    const int BUFFER_SIZE = 256;
+
+    const int BUFFER_SIZE = 20;
     char primeraEntrada[BUFFER_SIZE];
     std::string segundaEntrada;
 
-    // Pedir la primera entrada al usuario con fgets
-    std::cout << "Introduce una cadena de texto: ";
+    // USO INCOHERENTE DE C y C++. En este ejemplo mezclo fgets() de C y 
+    // getline() de C++. Para demostrar que se produce una situación incoherente, 
+    // debído a cómo gestionan ambas el stdin, provoca que tenga que pulsar
+    // dos veces INTRO tras el primer fgets()
+
+    // Pido la primera entrada al usuario con fgets
+    std::cout << "OP1 Introduce una cadena de texto: ";
     fgets(primeraEntrada, BUFFER_SIZE, stdin);
 
-    // Limpiar el búfer de entrada
-    // std::cin.clear();
-    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // // Limpiar el búfer de entrada después de fgets
+    // int c;
+    // while ((c = getchar()) != '\n' && c != EOF) { /* descartar caracteres */ }
 
-    // Limpiar el búfer de entrada después de fgets
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF) { /* descartar caracteres */ }
+    // Limpiar el búfer de entrada
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     // Pedir la segunda entrada al usuario con getline
-    std::cout << "Ahora introduce otra cadena de texto: ";
+    std::cout << "OP1 Ahora introduce otra cadena de texto: ";
     std::getline(std::cin, segundaEntrada);
 
     // Mostrar las entradas
-    std::cout << "Primera cadena introducida: " << primeraEntrada << std::endl;
-    std::cout << "Segunda cadena introducida: " << segundaEntrada << std::endl;
+    std::cout << "OP1 Primera cadena introducida: " << primeraEntrada << std::endl;
+    std::cout << "OP1 Segunda cadena introducida: " << segundaEntrada << std::endl;
+
+
+    std::string priEntrada;
+    std::string segEntrada;
+
+    // Pedir la primera entrada al usuario
+    std::cout << "OP2 Introduce una cadena de texto: ";
+    std::getline(std::cin, priEntrada);
+
+    // Limpiar el búfer de entrada YA NO ES NECESARIO
+    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    // Pedir la segunda entrada al usuario
+    std::cout << "OP2 Ahora introduce otra cadena de texto: ";
+    std::getline(std::cin, segEntrada);
+
+    // Mostrar las entradas
+    std::cout << "OP2 Primera cadena introducida: " << priEntrada << std::endl;
+    std::cout << "OP2 Segunda cadena introducida: " << segEntrada << std::endl;
 
     return 0;
 }
+
