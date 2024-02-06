@@ -194,12 +194,11 @@ int main()
     cout << endl << "===== Busca pepe: " << buscaNombre("pepe", nombres, array_size(nombres)) << endl;
     cout << "===== Busca juan: " << buscaNombre("pedro", nombres, array_size(nombres)) << endl;
 
-    cout << endl << "=====" << endl;
+    cout << endl << "===== !!" << endl;
 
     // for (int i : vectorSized ) {
     //     cout<<"v["<<i<<"]="<<vectorSized[i]<<endl;
     // }
-
 
     return 0;
 }
