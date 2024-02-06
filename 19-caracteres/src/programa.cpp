@@ -30,14 +30,12 @@ int main() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { /* descartar caracteres */ }
 
-    // Mostrar la primera entrada
-    std::cout << "Primera cadena introducida: " << primeraEntrada << std::endl;
-
     // Pedir la segunda entrada al usuario con getline
     std::cout << "Ahora introduce otra cadena de texto: ";
     std::getline(std::cin, segundaEntrada);
 
     // Mostrar las entradas
+    std::cout << "Primera cadena introducida: " << primeraEntrada << std::endl;
     std::cout << "Segunda cadena introducida: " << segundaEntrada << std::endl;
 
     return 0;
