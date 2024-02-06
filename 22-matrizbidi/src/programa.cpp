@@ -1,7 +1,8 @@
 // Programa para pruebas en C++
 //
 
-// Crear una matriz bidimensional con los 100 primeros números
+// Crear una matriz bidimensional con los 100 primeros números naturales, 
+// luego crear una con números naturales predefinidos.
 
 #include <iostream>
 #include <iomanip>
@@ -9,6 +10,7 @@
 
 using namespace std;
 
+// Crear una matriz bidimensional con los 100 primeros números naturales
 void iniMatrix(int m[10][10])
 {
       int x = 0, y = 0;
@@ -22,6 +24,7 @@ void iniMatrix(int m[10][10])
       } while (++x < 10);
 }
 
+// Mostrar la matriz
 void showMatrix(int m[10][10])
 {
       int x = 0, y = 0;
@@ -38,21 +41,30 @@ void showMatrix(int m[10][10])
 
 int main()
 {
-
-      // Defino la matriz bidimensional
-      int matriz[10][10];
-      int i = 1;
-
+      // Di algo majo
       cout << std::setfill('0');
       cout << std::setw(3);
-      // cout << setprecision(4);
       cout << "--" << endl;
 
-      iniMatrix(matriz);
-      showMatrix(matriz);
+      // Matriz bidimensional con los 100 primeros números naturales
+      int matrizSinInicializar[10][10];
+      // Inicializo y muestro
+      iniMatrix(matrizSinInicializar);
+      showMatrix(matrizSinInicializar);
+      cout << endl;
 
-      cout << endl
-           << "Done!" << endl;
+      // Matriz bidimensional con los 100 primeros números naturales predefinicidos
+      int matrizNumerosPredeficinidos[10][10]={ };
+      // Inicializo y muestro
+      //iniMatrix(matrizSinInicializar);
+      showMatrix(matrizSinInicializar);
+      cout << endl;
+
+
+
+
+
+      cout << "Done!" << endl;
 
       return 0;
 }
