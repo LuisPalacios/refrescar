@@ -18,14 +18,34 @@ struct Persona {
   string apellido;
   string direccion;
   int edad;
-};
+} x = { "Peter", "Black" }, y = { "John", "Le Carre", "Francia", 23 }; // Habil
+  
+typedef struct People
+{
+  /* data */
+  string name;
+  string lastname;
+  string address;
+  int age;
+} person;
+
 
 void muestraPersona(Persona per) {
-
+  cout << "--" << endl;
   cout << "Nombre: " << per.nombre << endl;
   cout << "Apellido: " << per.apellido << endl;
   cout << "Dirección: " << per.direccion << endl;
   cout << "Edad: " << per.edad << endl;
+  cout << "--" << endl;
+}
+
+void showPerson(person pe) {
+  cout << "--" << endl;
+  cout << "Name: " << pe.name << endl;
+  cout << "Last: " << pe.lastname << endl;
+  cout << "Addr: " << pe.address << endl;
+  cout << "Age : " << pe.age << endl;
+  cout << "--" << endl;
 }
 
 int main() {
@@ -39,15 +59,20 @@ int main() {
   p.edad = 35;
   muestraPersona(p);
 
-  cout << "--" << endl;
 
   Persona p2 = {"Juan", "Pa", "SuCasa", 34};
   muestraPersona(p2);
+  muestraPersona(x);
+  muestraPersona(y);
+
+
+  person persona1={"Paul", "Mac", "London"};
+  showPerson(persona1);
 
   cout << "--" << endl;
   cout << "Done!" << endl;
 
-
+    
 
 
 
