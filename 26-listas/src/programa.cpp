@@ -236,6 +236,8 @@ void Lista::simularColasFIFO() {
     rellenarListaConDatosAleatorios(); // Primera tanda de 10 nodos
     rellenarListaConDatosAleatorios(); // Segunda tanda de 10 nodos
 
+    mostrarContenidoCompletoLista();
+
     cout << "Procesando y eliminando nodos en orden FIFO..." << endl;
     while (cabeza != nullptr) {
         cout << "Eliminando nodo: ";
@@ -243,7 +245,39 @@ void Lista::simularColasFIFO() {
         eliminarPrimerNodo();
     }
     cout << "Todos los nodos han sido procesados y eliminados." << endl;
+    cout << "=========" << endl;
+    mostrarContenidoCompletoLista();
+    cout << "=========" << endl;
 }
+
+// Pila: Es una lista que almacena la info en modo LIFO
+// A continuación vemos un ejemplo de cómo usar mis Listas como Pilas. 
+void Lista::simularPilasLIFO() {
+    cout << "Añadiendo 20 nodos con datos aleatorios..." << endl;
+    rellenarListaConDatosAleatorios(); // Primera tanda de 10 nodos
+    rellenarListaConDatosAleatorios(); // Segunda tanda de 10 nodos
+
+    mostrarContenidoCompletoLista();
+
+    cout << "Procesando y eliminando los últimos 20 nodos en orden LIFO..." << endl;
+    int nodosAEliminar = 20;
+    while (cabeza != nullptr && nodosAEliminar > 0) {
+        Nodo* ultimoNodo = cabeza;
+        while (ultimoNodo->siguiente != nullptr) {
+            ultimoNodo = ultimoNodo->siguiente;
+        }
+        cout << "Eliminando nodo: ";
+        cout << "Nombre: " << ultimoNodo->nombre << ", Apellido: " << ultimoNodo->apellido << ", Edad: " << ultimoNodo->edad << endl;
+        eliminarUltimoNodo();
+        nodosAEliminar--;
+    }
+    cout << "Los últimos 20 nodos han sido procesados y eliminados." << endl;
+    cout << "=========" << endl;
+    mostrarContenidoCompletoLista();
+    cout << "=========" << endl;
+}
+
+
 
 int main() {
     Lista lista;
