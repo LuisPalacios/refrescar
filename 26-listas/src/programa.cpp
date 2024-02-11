@@ -57,6 +57,8 @@ struct Lista {
     void mostrarContenidoCompletoLista();
     void eliminarListaCompleta();
     void rellenarListaConDatosAleatorios();
+    void simularColasFIFO();
+    void simularPilasLIFO();
 };
 
 
@@ -187,12 +189,13 @@ void Lista::mostrarContenidoCompletoLista() {
 
     Nodo* temp = cabeza;
     int contador = 0;
+    cout << "----------------LISTA-------------------" << endl;
     while (temp != nullptr) {
-        cout << "Nodo " << contador << ": ";
-        cout << "Nombre: " << temp->nombre << ", Apellido: " << temp->apellido << ", Edad: " << temp->edad << endl;
+        cout << contador << ": " << temp->nombre << " " << temp->apellido << " " << temp->edad << endl;
         temp = temp->siguiente;
         contador++;
     }
+    cout << "----------------------------------------" << endl;
 }
 
 // Reinicializar la lista por completo.
@@ -226,6 +229,21 @@ void Lista::rellenarListaConDatosAleatorios() {
 
 }
 
+// Cola: Es una lista que almacena la info en modo FIFO
+// A continuación vemos un ejemplo de cómo usar mis Listas como Colas. 
+void Lista::simularColasFIFO() {
+    cout << "Añadiendo 20 nodos con datos aleatorios..." << endl;
+    rellenarListaConDatosAleatorios(); // Primera tanda de 10 nodos
+    rellenarListaConDatosAleatorios(); // Segunda tanda de 10 nodos
+
+    cout << "Procesando y eliminando nodos en orden FIFO..." << endl;
+    while (cabeza != nullptr) {
+        cout << "Eliminando nodo: ";
+        cout << "Nombre: " << cabeza->nombre << ", Apellido: " << cabeza->apellido << ", Edad: " << cabeza->edad << endl;
+        eliminarPrimerNodo();
+    }
+    cout << "Todos los nodos han sido procesados y eliminados." << endl;
+}
 
 int main() {
     Lista lista;
@@ -244,7 +262,9 @@ int main() {
         cout << "8. Mostrar contenido completo de la lista" << endl;
         cout << "9. Eliminar lista completa" << endl;
         cout << "10. Añadir 10 nodos con datos aleatorios" << endl;
-        cout << "11. Salir" << endl;
+        cout << "11. Simular Colas (FIFO)" << endl;
+        cout << "12. Simular Pilas (LIFO)" << endl;
+        cout << "13. Salir" << endl;
         cout << "Elige una opcion: ";
         cin >> opcion;
 
@@ -310,10 +330,18 @@ int main() {
                 lista.rellenarListaConDatosAleatorios();
                 break;
 
+            case 11:
+                lista.simularColasFIFO();
+                break;
+
+            case 12:
+                lista.simularPilasLIFO();
+                break;
+
             default:
                 break;
         }
-    } while (opcion != 11);
+    } while (opcion != 12);
 
     return 0;
 }
