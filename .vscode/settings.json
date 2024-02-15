@@ -63,5 +63,6 @@
         "thread": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
-    "cmake.sourceDirectory": "/Users/luis/Library/Mobile Documents/com~apple~CloudDocs/0_priv/Luis/Prog/github-luispa/refrescar/24-struct/src"
+    "cmake.sourceDirectory": "/Users/luis/Library/Mobile Documents/com~apple~CloudDocs/0_priv/Luis/Prog/github-luispa/refrescar/24-struct/src",
+    "cmake.configureOnOpen": true
 }
