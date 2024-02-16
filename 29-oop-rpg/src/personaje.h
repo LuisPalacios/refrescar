@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 
+#ifndef PERSONAJE_H
+#define PERSONAJE_H
+
 class Personaje {
 protected:
     std::string nombre;
@@ -26,3 +29,5 @@ public:
                   << "\nRango: " << rango << std::endl;
     }
 };
+
+#endif
