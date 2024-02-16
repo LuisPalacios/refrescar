@@ -9,6 +9,7 @@ Todos los personajes constan de nombre, puntos de vida, nivel, defensa física y
 
 guerrero: tiene stats adicionales de fuerza, regeneración de vida, bloqueo
 arquero: tiene stats adicionales de habilidad de arco, críticos, precisión, evasión
+mago: tiene stats adicionales de mana, inteligencia, regeneración de mana, control de mana
 sacerdote: tiene stats adicionales de fe y sanacion, maldicion y bendición
 picaro: destreza, sigilo, evasión, criticos
 caballero: resistencia a encantamiento, regeneración de vida, sanación, habilidad con lanza, habilidad de espada
@@ -31,29 +32,39 @@ caballero: carga(), intimidar (),fortalecer()
 
 using namespace std;
 
-class Persona {
+// Todos los personajes constan de nombre, puntos de vida, nivel, defensa física y mágica, velocidad de ataque y movimiento, rango
+
+class Personaje {
     protected: 
         string nombre;
-        int edad;
+        int vida;
+        int nivel;
+        int defensaFisica;
+        int defensaMagica;
+        int velocidadAtaque;
+        int velocidadMovimiento;
+        int rango;
 
     public: 
-        Persona(string _nombre, int _edad) {
-            nombre = _nombre;
-            edad = _edad;
-        }
+        Personaje(string _nombre, int _vida, int _nivel, 
+                  int _defensaFisica, int _defensaMagica,
+                  int _velocidadAtaque, int _velocidadMovimiento) 
+                  : nombre(_nombre), vida(_vida), nivel(_nivel),
+                    defensaFisica(_defensaFisica), defensaMagica(_defensaMagica),
+                    velocidadAtaque(_velocidadAtaque), velocidadMovimiento(_velocidadMovimiento) {}
 
         string getNombre() {
             return nombre;
         }
-        int getEdad() {
-            return edad;
+        int getVida() {
+            return vida;
         }
 
         void setNombre(string _nombre) {
             nombre = _nombre;
         }
-        void setEdad(int _edad) {
-            edad = _edad;
+        void setVida(int _vida) {
+            vida = _vida;
         }
 };
 
