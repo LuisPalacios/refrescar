@@ -1,6 +1,26 @@
 /*
 
-Programa en C++ para demostrar la herencia
+Programa en C++ OOP
+
+Supongamos que queremos crear un Juego RPG y queremos crear distintos personajes para dicho juego
+por ejemplo mago, guerrero, arquero, sacerdote‚ picaro y caballero
+
+Todos los personajes constan de nombre, puntos de vida, nivel, defensa física y mágica, velocidad de ataque y movimiento, rango
+
+guerrero: tiene stats adicionales de fuerza, regeneración de vida, bloqueo
+arquero: tiene stats adicionales de habilidad de arco, críticos, precisión, evasión
+sacerdote: tiene stats adicionales de fe y sanacion, maldicion y bendición
+picaro: destreza, sigilo, evasión, criticos
+caballero: resistencia a encantamiento, regeneración de vida, sanación, habilidad con lanza, habilidad de espada
+
+Adicionalmente cada personaje puede tener habilidades especiales
+
+guerrero: intimidación(), embestida()
+arquero: flechaVenenosa(), disparoPreciso(), trampas()
+mago: invocacion(), bolaDeFuego(), Maldicion(), teletransporte();
+sacerdote: curacion(), proteccion() ‚purificacion()
+picaro: golpeCritico(), ataqueFurtivo(),voltereta()
+caballero: carga(), intimidar (),fortalecer()
 
 */
 
