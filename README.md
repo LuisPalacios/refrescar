@@ -1,9 +1,8 @@
-tocado
 # Refrescar
 
 Un pequeño repositorio para refrescar mi C/C++ en el 2024, con cmake, boost, google tests
 
-### Ejemplos
+## Ejemplos
 
 Entrar en cada uno de los directorios, preparar con cmake, compilar y ejecutar.
 
@@ -20,4 +19,3 @@ Actualizar desde la raiz del proyecto
 ```shell
 git add . && git commit -am "descripción"
 ```
-
