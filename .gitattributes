@@ -1,6 +1,6 @@
 # Git to handle line endings
 # https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
-#
+# --
 # Objective is to be able to work on Windows + Linux + MacOS mixded
 # environments and allow Git manage line endings in this specific repository.
 # 
