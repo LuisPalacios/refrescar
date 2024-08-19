@@ -37,6 +37,7 @@
 #   false: same as binary
 #   true:  same as eol=crlf      Used in Windows
 #   input: same as eol=lf        Used in Linux/Mac
+#
 
 ###############################################################################
 # Sumwall's configuration
